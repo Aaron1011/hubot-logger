@@ -167,7 +167,10 @@ module.exports = (robot) ->
       robot.logger_app.use robot.logger_app.router
     )
 
+    console.log "Done setup!"
+
     robot.logger_app.get "/irclogs", (req, res) ->
+      console.log "Got request!"
       res.redirect "/irclogs/channels"
 
     robot.logger_app.get "/irclogs/channels", (req, res) ->

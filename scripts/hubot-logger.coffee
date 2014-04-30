@@ -154,7 +154,7 @@ module.exports = (robot) ->
     #   util.puts(util.inspect(msg))
 
     # init app
-    port = process.env.IRCLOGS_PORT || 8086
+    port = process.env.PORT || 8086
     robot.logger_app = express()
     robot.logger_app.configure( ->
       robot.logger_app.set 'views', __dirname + '/../views'
